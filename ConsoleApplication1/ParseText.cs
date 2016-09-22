@@ -43,10 +43,10 @@ namespace TextProcessor
     {
         public void ProcessString(string input)
         {
-            StringBuilder CompleteText = new StringBuilder(input);
-
+            StringBuilder CompleteText = new StringBuilder();
+            
             //Assuming each word in a sentence is delimited with a space.
-            string[] ExtractWords = CompleteText.ToString().Split(null);
+            string[] ExtractWords = input.Split(null);
             int index_Of_lastChar = 0;
             int count_Of_chars = 0;
             string delimiter = " ";
